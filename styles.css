@@ -1592,18 +1592,26 @@ ul {
   .hero-stats {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 0.8rem;
-    padding: 1.2rem 0;
+    gap: 0.6rem;
+    padding: 1.1rem 0;
     margin-top: 0.2rem;
     width: 100%;
   }
 
+  .stat-item {
+    align-items: center;
+    text-align: center;
+  }
+
   .stat-number {
-    font-size: 1.75rem;
+    font-size: clamp(1.35rem, 4vw, 1.85rem);
+    line-height: 1.1;
   }
 
   .stat-label {
-    font-size: 0.75rem;
+    font-size: clamp(0.72rem, 2.2vw, 0.8rem);
+    line-height: 1.25;
+    text-align: center;
   }
 
   .hero-ctas {
@@ -1793,12 +1801,28 @@ ul {
   }
 
   .hero-stats {
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.35rem;
+    padding: 0.9rem 0;
+    width: 100%;
   }
 
   .stat-item {
     align-items: center;
+    text-align: center;
+  }
+
+  .stat-number {
+    font-size: clamp(1.15rem, 4.2vw, 1.5rem);
+    line-height: 1.1;
+    margin-bottom: 0.15rem;
+  }
+
+  .stat-label {
+    font-size: clamp(0.65rem, 2.1vw, 0.72rem);
+    line-height: 1.2;
+    text-align: center;
   }
 
   .gallery-grid {
