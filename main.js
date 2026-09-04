@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
           stat.innerText = '+' + Math.ceil(count).toLocaleString('pt-BR');
           setTimeout(updateCount, 30);
         } else {
-          stat.innerText = '+' + target.toLocaleString('pt-BR');
+          stat.innerText = target === 10000 ? '+10 mil' : '+' + target.toLocaleString('pt-BR');
         }
       };
       updateCount();
