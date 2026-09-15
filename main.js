@@ -126,3 +126,21 @@ document.addEventListener('click', (e) => {
     closeModal();
   }
 });
+
+// YouTube Interactive Player Handler
+function playVideo(container, videoId) {
+  if (container.classList.contains('playing')) return;
+
+  const iframe = document.createElement('iframe');
+  iframe.setAttribute('src', `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`);
+  iframe.setAttribute('title', 'YouTube video player');
+  iframe.setAttribute('frameborder', '0');
+  iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+  iframe.setAttribute('allowfullscreen', 'true');
+  iframe.className = 'video-iframe';
+
+  container.innerHTML = '';
+  container.appendChild(iframe);
+  container.classList.add('playing');
+}
+
